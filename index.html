@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>app for square root</title>
+   
+  </head>
+<body>
+  <center>
+   <h3>Square root</h3>
+   <form onsubmit="show()">
+  
+    <input type="number"  placeholder="enter the number" id="no"/><br/> <br/>
+    <input type="submit" value="find square"/>
+
+   </form>
+   <h2 id="msg"/>
+
+ <script>
+     function show()
+   {
+    event.preventDefault();
+    let no=document.getElementById("no");
+    let msg=document.getElementById("msg");
+
+    let n=parseFloat(no.value);
+    let r=n*n;
+    let ans="square="+r.toFixed(2);
+    msg.innerHTML=ans;
+    
+   if(no.value==="")
+     { 
+       alert("please enter the number");
+       msg.innerHTML="";
+       no.focus();
+       return;
+       
+     }
+
+
+   }
+
+ </script>
+
+
+
+  </center>
+</body>
+
+</html>
